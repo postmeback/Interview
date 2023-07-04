@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CheckPalindrome
 {
     public class Program
@@ -17,7 +12,7 @@ namespace CheckPalindrome
         }
         internal static string chkPalindrome(string str)
         {
-            bool flag = false;
+            bool flag = true;
             for (int i = 0, j = str.Length - 1; i < str.Length / 2; i++, j--)
             {
                 if (str[i] != str[j])
@@ -25,12 +20,6 @@ namespace CheckPalindrome
                     flag = false;
                     break;
                 }
-                else
-                {
-
-                    flag = true;
-                }
-
             }
             if (flag)
             {

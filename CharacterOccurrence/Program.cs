@@ -12,6 +12,13 @@ namespace CharacterOccurrence
         {
             string InputStr = Console.ReadLine();
             Dictionary<char, int> Result = CountCharacterOccurrence(InputStr);
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in Result)
+            {
+                string occurrence = item.Value == 1 ? "time" : "times";
+                sb.Append("\n" + item.Key + " appears " + item.Value + " " + occurrence);
+            }
+            Console.WriteLine(sb.ToString());
             Console.ReadKey();
         }
         internal static Dictionary<char, int> CountCharacterOccurrence(string str)
